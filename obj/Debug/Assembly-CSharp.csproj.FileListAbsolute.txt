@@ -1,2 +1,0 @@
-C:\Program Files\Unity2018.1\Editor\StuHome\HomeDrive2$\1502642\Desktop\Masters\Game Design and Development\Prototype\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
-C:\Program Files\Unity2018.1\Editor\StuHome\HomeDrive2$\1502642\Desktop\Masters\Game Design and Development\Prototype\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
