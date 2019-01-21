@@ -1723,7 +1723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  gravity: 30
+  gravity: 31
   FlySpeed: 15
   GroundCheck: {fileID: 285255439}
 --- !u!50 &1343541394
