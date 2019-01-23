@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{B1235EE4-71EE-C815-28F8-C3378E5ADB84}</ProjectGuid>
+    <ProjectGuid>{266B520C-6D88-E0EB-7A02-BE2FB6176CD0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -65,10 +65,10 @@
     <Compile Include="Assets\PlayerController.cs" />
     <Compile Include="Assets\ScreenShake.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Program Files/Unity2018.1/Editor/StuHome/HomeDrive2$/1502642/Desktop/Masters/Game Design and Development/Prototype/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Prototype/New folder/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Program Files/Unity2018.1/Editor/StuHome/HomeDrive2$/1502642/Desktop/Masters/Game Design and Development/Prototype/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Prototype/New folder/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity2018.1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
