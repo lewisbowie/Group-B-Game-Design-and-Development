@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 10.0f;
     public float FlySpeed = 12.0f;
     public float JumpForce = 900.0f;
-    public int JumpHeight;
+    public float flyingTime = 2f;
 
     //other variables
     private Vector2 moveDirection = Vector2.zero;
@@ -19,6 +19,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 jump;
     private Rigidbody2D controller;
     private bool canJump;
+    private Vector3 flyingposition;
+    private bool canFly;
+    private float flyingTimer;
+    
 
 
 
@@ -39,21 +43,24 @@ public class PlayerController : MonoBehaviour
         //Declares jump force
         jump = Vector2.up * JumpForce;
         canJump = false;
+        canFly = false;
     }
 
     void Fly()
     {
         //flys character
-        GetComponent<Rigidbody2D>().AddForce(fly);
-        GetComponent<Rigidbody2D>().gravityScale = 1;
+        flyingposition = transform.position;
+        flyingposition.y += 2;
+        canFly = true;
+        flyingTimer = 0;
+        controller.isKinematic = true;
+        
     }
 
     void Jump()
     {
         //Jumps character
-
-        canJump = true;
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 900f));
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 400f));
     }
    
         
@@ -69,25 +76,52 @@ public class PlayerController : MonoBehaviour
             //changes direction character faces to last key
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection.x *= speed;
-            //Sets jump on space and fly on double space
+
+            //Sets jump on space
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Jump();
+                if (canJump)
+                {
+                    Jump();
+                }
             }
 
+            //sets fly on hold m
+            if (Input.GetKey(KeyCode.M) && !canFly)
+            { 
+                Fly();
+            }
+            if (canFly)
+            {
+                transform.position = Vector3.Lerp(transform.position, flyingposition, Time.deltaTime * 5);
+                flyingTimer += Time.deltaTime;
 
+                if (flyingTimer >= flyingTime)
+                {
+                    canFly = false;
+                    controller.isKinematic = false;
+                }
+            }
 
             // moves the player
             controller.velocity = (moveDirection);
         }
     }
 
+    //Checks if player is grounded as to jump
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
        {
+            canJump = true;
+       }
+   }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
             canJump = false;
         }
-   }
+    }
 }
 

@@ -1725,7 +1725,7 @@ MonoBehaviour:
   speed: 10
   FlySpeed: 15
   JumpForce: 10
-  JumpHeight: 10
+  flyingTime: 2
   GroundCheck: {fileID: 285255439}
 --- !u!50 &1343541394
 Rigidbody2D:
@@ -1745,7 +1745,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &1343541395
 BoxCollider2D:
