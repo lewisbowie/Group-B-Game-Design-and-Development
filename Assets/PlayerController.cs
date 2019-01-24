@@ -49,12 +49,13 @@ public class PlayerController : MonoBehaviour
     void Fly()
     {
         //flys character
-        flyingposition = transform.position;
-        flyingposition.y += 2;
-        canFly = true;
-        flyingTimer = 0;
-        controller.isKinematic = true;
-        
+      
+          canFly = true;
+          flyingTimer = 0;
+        controller.gravityScale = 0.0f;
+     
+
+
     }
 
     void Jump()
@@ -73,6 +74,9 @@ public class PlayerController : MonoBehaviour
         {
             //moves character on x and y axis
             moveDirection = new Vector2(Input.GetAxis("Horizontal"), controller.velocity.y);
+
+       
+           
             //changes direction character faces to last key
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection.x *= speed;
@@ -87,19 +91,23 @@ public class PlayerController : MonoBehaviour
             }
 
             //sets fly on hold m
-            if (Input.GetKey(KeyCode.M) && !canFly)
+            if (Input.GetKeyDown(KeyCode.M) && !canFly)
             { 
                 Fly();
             }
             if (canFly)
             {
+                //  flyingposition.x = moveDirection.x *speed * Time.deltaTime;
+                flyingposition = transform.localPosition;
+                flyingposition.y += 2;
+
                 transform.position = Vector3.Lerp(transform.position, flyingposition, Time.deltaTime * 5);
                 flyingTimer += Time.deltaTime;
 
                 if (flyingTimer >= flyingTime)
                 {
                     canFly = false;
-                    controller.isKinematic = false;
+                   controller.gravityScale = 5.0f;
                 }
             }
 
@@ -114,6 +122,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
        {
             canJump = true;
+           
        }
    }
     void OnCollisionExit2D(Collision2D collision)
@@ -121,7 +130,18 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             canJump = false;
+            
         }
     }
+
+    //Adds collectible pick up
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if(collider.gameObject.tag == "Collectible")
+        {
+            collider.gameObject.SetActive(false);
+        }
+    }
+ 
 }
 
