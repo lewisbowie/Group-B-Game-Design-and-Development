@@ -53,34 +53,28 @@ public class PlayerController : MonoBehaviour
           canFly = true;
           flyingTimer = 0;
         controller.gravityScale = 0.0f;
-     
-
-
     }
 
     void Jump()
     {
         //Jumps character
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 400f));
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 500f));
     }
    
         
 
     void Update()
     {
-        
         //checks if the player is on grounds
         if (Physics2D.OverlapCircle(GroundCheck.position, 0.2f))
         {
             //moves character on x and y axis
             moveDirection = new Vector2(Input.GetAxis("Horizontal"), controller.velocity.y);
 
-       
-           
             //changes direction character faces to last key
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection.x *= speed;
-
+        }
             //Sets jump on space
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -95,13 +89,21 @@ public class PlayerController : MonoBehaviour
             { 
                 Fly();
             }
+
+            //returns if M is released flying stops
+            if(Input.GetKeyUp(KeyCode.M))
+        {
+            canFly = false;
+            controller.gravityScale = 5.0f;
+        }
+
             if (canFly)
             {
                 //  flyingposition.x = moveDirection.x *speed * Time.deltaTime;
                 flyingposition = transform.localPosition;
                 flyingposition.y += 2;
 
-                transform.position = Vector3.Lerp(transform.position, flyingposition, Time.deltaTime * 5);
+                transform.position = Vector3.Lerp(transform.position, flyingposition, Time.deltaTime * 2);
                 flyingTimer += Time.deltaTime;
 
                 if (flyingTimer >= flyingTime)
@@ -114,7 +116,7 @@ public class PlayerController : MonoBehaviour
             // moves the player
             controller.velocity = (moveDirection);
         }
-    }
+    
 
     //Checks if player is grounded as to jump
     void OnCollisionEnter2D(Collision2D collision)
@@ -122,6 +124,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
        {
             canJump = true;
+           // canFly = true;
            
        }
    }
@@ -130,7 +133,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             canJump = false;
-            
+           // canFly = false;
         }
     }
 
