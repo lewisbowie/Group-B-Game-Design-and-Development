@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private bool canFly;
     private float flyingTimer;
     private int pickedUp;
+    public int FlyActivates;
     
 
 
@@ -86,7 +87,7 @@ public class PlayerController : MonoBehaviour
             }
 
         //sets fly on hold m
-        if(pickedUp >= 3)
+        if(pickedUp >= FlyActivates)
         {
             if (Input.GetKeyDown(KeyCode.M) && !canFly)
             {
