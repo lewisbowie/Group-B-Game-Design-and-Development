@@ -118,6 +118,7 @@ public class PlayerController : MonoBehaviour
         }
     
 
+
     //Checks if player is grounded as to jump
     void OnCollisionEnter2D(Collision2D collision)
     {
