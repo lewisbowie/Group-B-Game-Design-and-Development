@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class KnightAI : MonoBehaviour {
 
+    [Header("Speed of character")]
     public float speed;
     public float distance;
 
-    private bool moveRight = true;
+    [Header("Detections")]
     public Transform GroundDetection;
     public Transform WallDetection;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+    private Vector2 direction = new Vector2(0, 1);
+    private bool moveRight = true;
 
+
+
+    // Update is called once per frame
+    void Update () {
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        //uses raycast to detect when platform edge is beside the enemy.
+        
         RaycastHit2D groundInfo = Physics2D.Raycast(GroundDetection.position, Vector2.down, distance);
 
         if(groundInfo.collider == false)
@@ -35,6 +37,28 @@ public class KnightAI : MonoBehaviour {
                 moveRight = true;
             }
         }
-      
+
+        RaycastHit2D Wall = Physics2D.Raycast(WallDetection.position, direction, distance);
+
+        if (Wall == true)
+        {
+            if (Wall.collider.CompareTag("Wall"))
+            {
+                //makes the enemy detect the wall with tag wall using raycast
+                Rotate();
+                speed *= -1;
+                direction *= -1;
+                moveRight = false;
+            }
+     
+        }
+
+    }
+    //changes rotation of enemy when colliding with wall
+    void Rotate()
+    {
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 }

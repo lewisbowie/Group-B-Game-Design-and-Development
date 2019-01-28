@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 flyingposition;
     private bool canFly;
     private float flyingTimer;
+    private int pickedUp;
     
 
 
@@ -84,18 +85,20 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            //sets fly on hold m
+        //sets fly on hold m
+        if(pickedUp >= 3)
+        {
             if (Input.GetKeyDown(KeyCode.M) && !canFly)
-            { 
+            {
                 Fly();
             }
 
             //returns if M is released flying stops
-            if(Input.GetKeyUp(KeyCode.M))
-        {
-            canFly = false;
-            controller.gravityScale = 5.0f;
-        }
+            if (Input.GetKeyUp(KeyCode.M))
+            {
+                canFly = false;
+                controller.gravityScale = 5.0f;
+            }
 
             if (canFly)
             {
@@ -109,9 +112,11 @@ public class PlayerController : MonoBehaviour
                 if (flyingTimer >= flyingTime)
                 {
                     canFly = false;
-                   controller.gravityScale = 5.0f;
+                    controller.gravityScale = 5.0f;
                 }
             }
+        }
+       
 
             // moves the player
             controller.velocity = (moveDirection);
@@ -144,6 +149,7 @@ public class PlayerController : MonoBehaviour
         if(collider.gameObject.tag == "Collectible")
         {
             collider.gameObject.SetActive(false);
+            pickedUp += 1;
         }
     }
  
