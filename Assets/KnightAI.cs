@@ -15,17 +15,24 @@ public class KnightAI : MonoBehaviour {
 
     private Vector2 direction = new Vector2(0, 1);
     private bool moveRight = true;
+    private bool Move = true;
 
     [Header("Damage Options")]
     public float AttackRangeMelee;
     public int damage;
     public float DelayAttack;
+    public float minDistance;
     private float lastAttack;
 
 
     // Update is called once per frame
     void Update () {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+       
+        if (Move) 
+        {
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+        }
+       
         //uses raycast to detect when platform edge is beside the enemy.
         
         RaycastHit2D groundInfo = Physics2D.Raycast(GroundDetection.position, Vector2.down, distance);
@@ -68,6 +75,7 @@ public class KnightAI : MonoBehaviour {
 
         //Attacking the Player melee
         float distancefromPlayer = Vector3.Distance(transform.position, Player.position);
+     
 
         if(distancefromPlayer < AttackRangeMelee)
         {
@@ -76,8 +84,25 @@ public class KnightAI : MonoBehaviour {
                 Player.SendMessage("TakeDamage", damage);
                 lastAttack = Time.time;
             }
+
+            if(distancefromPlayer <= minDistance)
+            {
+                //logic
+                //notice when player is in range
+                //look at player
+                //follow player
+                Move = false;
+
+                //needs work currently goes away from player on sometimes, doesnt detect what side the player is at
+                transform.position = Vector3.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
+                // when player is out of range go back to normal movement
+              
+              
+               
+            }
+          
+
         }
-   
     }
     //changes rotation of enemy when colliding with wall
     void Rotate()
@@ -85,5 +110,11 @@ public class KnightAI : MonoBehaviour {
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+
+    void MovetoPlayer()
+    {
+      
+        transform.position = Vector2.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
     }
 }

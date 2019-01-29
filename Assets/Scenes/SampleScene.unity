@@ -1633,6 +1633,7 @@ MonoBehaviour:
   AttackRangeMelee: 0
   damage: 0
   DelayAttack: 0
+  minDistance: 0
 --- !u!61 &846674358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3358,9 +3359,10 @@ MonoBehaviour:
   GroundDetection: {fileID: 991032838}
   WallDetection: {fileID: 1650421567}
   Player: {fileID: 363726192}
-  AttackRangeMelee: 0
+  AttackRangeMelee: 2
   damage: 10
   DelayAttack: 2
+  minDistance: 4
 --- !u!1 &2120365378
 GameObject:
   m_ObjectHideFlags: 0
