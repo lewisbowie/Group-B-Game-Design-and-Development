@@ -23,8 +23,12 @@ public class PlayerController : MonoBehaviour
     private bool canFly;
     private float flyingTimer;
     private int pickedUp;
+
+    [Header("Gem Activations")]
     public int FlyActivates;
-    
+
+    [Header("Player Attributes")]
+    public float Health;
 
 
 
@@ -154,5 +158,11 @@ public class PlayerController : MonoBehaviour
         }
     }
  
+    public void TakeDamage(int damage){
+        Health -= damage;
+        if(Health <= 0){
+            Debug.Log("Dead");
+        }
+    }
 }
 

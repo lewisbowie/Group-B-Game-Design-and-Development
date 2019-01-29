@@ -11,10 +11,16 @@ public class KnightAI : MonoBehaviour {
     [Header("Detections")]
     public Transform GroundDetection;
     public Transform WallDetection;
+    public Transform Player;
 
     private Vector2 direction = new Vector2(0, 1);
     private bool moveRight = true;
 
+    [Header("Damage Options")]
+    public float AttackRangeMelee;
+    public int damage;
+    public float DelayAttack;
+    private float lastAttack;
 
 
     // Update is called once per frame
@@ -50,9 +56,28 @@ public class KnightAI : MonoBehaviour {
                 direction *= -1;
                 moveRight = false;
             }
-     
+            if (Wall.collider.CompareTag("Player"))
+            {
+                //makes the enemy detect the wall with tag wall using raycast
+                Rotate();
+                speed *= -1;
+                direction *= -1;
+                moveRight = false;
+            }
         }
 
+        //Attacking the Player melee
+        float distancefromPlayer = Vector3.Distance(transform.position, Player.position);
+
+        if(distancefromPlayer < AttackRangeMelee)
+        {
+            if(Time.time > lastAttack + DelayAttack)
+            {
+                Player.SendMessage("TakeDamage", damage);
+                lastAttack = Time.time;
+            }
+        }
+   
     }
     //changes rotation of enemy when colliding with wall
     void Rotate()
