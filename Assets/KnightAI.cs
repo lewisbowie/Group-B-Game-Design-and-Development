@@ -19,10 +19,13 @@ public class KnightAI : MonoBehaviour
     private Vector2 direction = new Vector2(0, 1);
     private bool moveRight = true;
     private bool Move = true;
+<<<<<<< HEAD
     private Vector3 newXPosition;
     private bool CheckGround = true;
     private bool CheckWall = true;
     private float ResumeMovementCounter = 2.0f;
+=======
+>>>>>>> a17b0b0eef06207200a83f698e16ff3921aafc28
 
     [Header("Damage Options")]
     public float AttackRangeMelee;
@@ -36,9 +39,22 @@ public class KnightAI : MonoBehaviour
 
 
     // Update is called once per frame
+<<<<<<< HEAD
     void Update()
     {
 
+=======
+    void Update () {
+       
+        if (Move) 
+        {
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+        }
+       
+        //uses raycast to detect when platform edge is beside the enemy.
+        
+        RaycastHit2D groundInfo = Physics2D.Raycast(GroundDetection.position, Vector2.down, distance);
+>>>>>>> a17b0b0eef06207200a83f698e16ff3921aafc28
 
         //moves enemy along platform
         if (Move)
@@ -92,7 +108,12 @@ public class KnightAI : MonoBehaviour
         }
 
         //Attacking the Player melee
+<<<<<<< HEAD
         float distancefromPlayer = Vector2.Distance(transform.position, Player.position);
+=======
+        float distancefromPlayer = Vector3.Distance(transform.position, Player.position);
+     
+>>>>>>> a17b0b0eef06207200a83f698e16ff3921aafc28
 
 
         if (distancefromPlayer < AttackRangeMelee)
@@ -103,6 +124,7 @@ public class KnightAI : MonoBehaviour
                 lastAttack = Time.time;
             }
 
+<<<<<<< HEAD
         }
         if (distancefromPlayer < minDistance)
         {
@@ -123,6 +145,24 @@ public class KnightAI : MonoBehaviour
             NormalMove();
             CheckWall = true;
             CheckGround = true;
+=======
+            if(distancefromPlayer <= minDistance)
+            {
+                //logic
+                //notice when player is in range
+                //look at player
+                //follow player
+                Move = false;
+
+                //needs work currently goes away from player on sometimes, doesnt detect what side the player is at
+                transform.position = Vector3.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
+                // when player is out of range go back to normal movement
+              
+              
+               
+            }
+          
+>>>>>>> a17b0b0eef06207200a83f698e16ff3921aafc28
 
         }
     }
@@ -136,6 +176,7 @@ public class KnightAI : MonoBehaviour
 
     void MovetoPlayer()
     {
+<<<<<<< HEAD
         //moves the enemy to the player when in range
         transform.position = Vector2.MoveTowards(transform.position, new Vector2(Player.position.x, transform.position.y), speed * Time.deltaTime);
     }
@@ -154,3 +195,9 @@ public class KnightAI : MonoBehaviour
         }
     }
 }
+=======
+      
+        transform.position = Vector2.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
+    }
+}
+>>>>>>> a17b0b0eef06207200a83f698e16ff3921aafc28
