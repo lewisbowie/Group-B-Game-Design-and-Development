@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 
 public class PlayerController : MonoBehaviour
@@ -24,11 +24,20 @@ public class PlayerController : MonoBehaviour
     private float flyingTimer;
     private int pickedUp;
 
+    [Header("Enemy")]
+    public Transform Knight;
+
     [Header("Gem Activations")]
     public int FlyActivates;
 
     [Header("Player Attributes")]
     public float Health;
+
+    [Header("Melee Damage Options")]
+    public float AttackRangeMelee;
+    public int damage;
+    public float DelayAttack;
+    private float lastAttack;
 
 
 
@@ -122,6 +131,14 @@ public class PlayerController : MonoBehaviour
             }
         }
        
+        //Melee Attack
+
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            MeleeAttack();
+        }
+
+
 
             // moves the player
             controller.velocity = (moveDirection);
@@ -158,11 +175,31 @@ public class PlayerController : MonoBehaviour
         }
     }
  
-    public void TakeDamage(int damage){
+    public void TakeDamage(int damage)
+    {
         Health -= damage;
-        if(Health <= 0){
-            Debug.Log("Dead");
+        if(Health <= 0)
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+    }
+    void MeleeAttack()
+    {
+        float distancefromPlayer = Vector2.Distance(transform.position, Knight.position);
+
+        if(GameObject.FindGameObjectWithTag("Enemy"))
+        {
+            if (distancefromPlayer < AttackRangeMelee)
+            {
+
+                Knight.SendMessage("TakeDamage", damage);
+                lastAttack = Time.time;
+
+            }
+        }
+       
     }
 }
 
