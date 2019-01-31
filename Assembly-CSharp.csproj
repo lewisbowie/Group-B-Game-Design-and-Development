@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{88C29D41-D52C-1543-96FE-F080E8810EEC}</ProjectGuid>
+    <ProjectGuid>{968174E2-8098-B3EB-1048-C98A2F539C08}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -65,11 +65,11 @@
     <Compile Include="Assets\KnightAI.cs" />
     <Compile Include="Assets\PlayerController.cs" />
     <Compile Include="Assets\ScreenShake.cs" />
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/lewisbowie/Documents/Game design and development/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/lewisbowie/Documents/Game design and development/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/lewisbowie/Documents/Working copy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>/Users/lewisbowie/Documents/Working copy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
