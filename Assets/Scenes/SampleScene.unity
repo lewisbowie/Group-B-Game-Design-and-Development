@@ -1630,7 +1630,7 @@ MonoBehaviour:
   GroundDetection: {fileID: 1242795034}
   WallDetection: {fileID: 758602589}
   Player: {fileID: 363726192}
-  AttackRangeMelee: 2
+  AttackRangeMelee: 1
   damage: 10
   DelayAttack: 2
   minDistance: 3

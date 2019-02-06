@@ -61,10 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Button.cs" />
-    <Compile Include="Assets\KnightAI.cs" />
-    <Compile Include="Assets\PlayerController.cs" />
-    <Compile Include="Assets\ScreenShake.cs" />
+    <Compile Include="Assets\Scripts\Button.cs" />
+    <Compile Include="Assets\Scripts\KnightAI.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\ScreenShake.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/lewisbowie/Documents/Working copy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

@@ -247,6 +247,12 @@ MonoBehaviour:
   FlySpeed: 15
   JumpForce: 10
   flyingTime: 2
+  Knight: {fileID: 0}
+  FlyActivates: 0
+  Health: 0
+  AttackRangeMelee: 0
+  damage: 0
+  DelayAttack: 0
   GroundCheck: {fileID: 4971970864265694}
 --- !u!212 &212013381484563928
 SpriteRenderer:
