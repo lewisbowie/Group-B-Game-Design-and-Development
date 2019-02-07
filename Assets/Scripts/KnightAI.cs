@@ -50,6 +50,6 @@
     }      //changes rotation of enemy when colliding with wall     void Rotate()     {         Vector3 scale = transform.localScale;         scale.x *= -1;         transform.localScale = scale;     }      void MovetoPlayer()     {
         //moves the enemy to the player when in range
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(Player.position.x, transform.position.y), speed * Time.deltaTime);     }     void NormalMove()     {         //the normal movement for the enemy along the platform         transform.Translate(Vector2.right * speed * Time.deltaTime);     }     public void TakeDamage(int damage)     {         Health -= damage;         if (Health <= 0)         {             Destroy(gameObject);             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);         }     }      IEnumerator delayNormal(){        
-            yield return new WaitForSeconds(3);             print("skbe");                     } } 
+            yield return new WaitForSeconds(3);                                } } 
 
 

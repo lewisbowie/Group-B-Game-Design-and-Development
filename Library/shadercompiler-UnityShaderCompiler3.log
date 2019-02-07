@@ -1,0 +1,29 @@
+Base path: /Applications/Unity/Unity.app/Contents
+Cmd: initializeCompiler
+Cmd: translateComputeKernel
+  api=14 insize=1993 outsize=3585 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=2059 outsize=2125 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=3070 outsize=48445 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=10881 outsize=10685 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=10685 outsize=18689 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=5781 outsize=8389 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=18299 outsize=9589 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=9493 outsize=16269 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=6977 outsize=13481 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=1806 outsize=1129 ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Unhandled exception: Protocol error - unexpected end of data (did the Editor crash?)
+
+Quitting shader compiler process
