@@ -1656,7 +1656,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 743120849}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.4570965}
+  m_LocalPosition: {x: 2.5965436, y: 1.1656772, z: 0}
   m_LocalScale: {x: 0.14570951, y: 0.14570965, z: 0.14570965}
   m_Children: []
   m_Father: {fileID: 1707581366}
@@ -1689,7 +1689,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 54
+  field of view: 40
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -3431,16 +3431,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b575adb438d624947ad32786194bd0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  FlySpeed: 15
-  JumpForce: 10
-  flyingTime: 2
+  speed: 6
+  FlySpeed: 10
+  JumpForce: 5
+  flyingTime: 1
   Knight: {fileID: 2100813690}
+  JumpActivates: 1
   FlyActivates: 3
-  Health: 20
+  BreathAttackActivates: 0
+  Health: 200
   AttackRangeMelee: 2
-  damage: 20
+  MeleeDamage: 0
+  BreathDamage: 20
   DelayAttack: 2
+  AttackRangeBreath: 4
   GroundCheck: {fileID: 285255439}
 --- !u!212 &2032426077
 SpriteRenderer:
