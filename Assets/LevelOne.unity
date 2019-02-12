@@ -1546,7 +1546,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 557645828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.65, y: -6.9, z: 0}
+  m_LocalPosition: {x: 17.65, y: -6.82, z: 0}
   m_LocalScale: {x: 4.8228936, y: 0.39448255, z: 1.6384988}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1925,7 +1925,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 644199247}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 58.14, y: 23.12, z: -7.6932964}
+  m_LocalPosition: {x: 58.6, y: 23.12, z: -7.6932964}
   m_LocalScale: {x: 3.6867476, y: 0.7815105, z: 1}
   m_Children: []
   m_Father: {fileID: 811772346}
@@ -6115,6 +6115,7 @@ MonoBehaviour:
   BreathDamage: 20
   DelayAttack: 2
   AttackRangeBreath: 4
+  anim: {fileID: 2032426078}
   CollectibleNumber: {fileID: 0}
   GroundCheck: {fileID: 285255439}
 --- !u!212 &2032426077

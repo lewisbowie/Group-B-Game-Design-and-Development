@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private float lastAttackMelee;
     public float AttackRangeBreath;
     private float LastAttackBreath;
+    public Animator anim; 
 
     public Text CollectibleNumber;
 
@@ -97,6 +98,7 @@ public class PlayerController : MonoBehaviour
     {
         moveDirection = Input.GetAxis("Horizontal");
         controller.velocity = new Vector2(moveDirection * speed, controller.velocity.y);
+        anim.SetFloat("Speed", controller.velocity.x);
 
     }
 

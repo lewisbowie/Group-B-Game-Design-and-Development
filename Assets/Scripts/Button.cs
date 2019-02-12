@@ -8,17 +8,19 @@ public class Button : MonoBehaviour {
     public Animator anim;
     public Animator anim2;
     public Animator anim3;
-    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.gameObject.tag == "Player")
         {
             anim.Play("LiftMovement");
             anim2.Play("LeverMovement");
-           anim3.Play("ObjectFall");
+            anim3.Play("ObjectFall");
+
         }
     }
 
 }
 //hello
+//hola
