@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 723cc8bd27ee9cd41954e032094270eb
+guid: 920e6456b99ccc8469632432fd2b3c44
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -87,7 +87,7 @@ ModelImporter:
     4300024: pCube1
     4300026: Hinge1
     4300028: Hinge2
-    7400000: MineDoor_Open
+    7400000: Break
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -118,10 +118,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: MineDoor_Open
+      name: Break
       takeName: Take 001
       firstFrame: 30
-      lastFrame: 60
+      lastFrame: 50
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
