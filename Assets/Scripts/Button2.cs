@@ -16,7 +16,7 @@ public class Button2 : MonoBehaviour {
         {
             anim.Play("LiftMovement2");
             anim2.Play("LeverMovement");
-            anim3.Play("ObjectFall");
+            anim3.Play("CageFall");
 
 
         }

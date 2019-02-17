@@ -121,6 +121,7 @@
     <Compile Include="Assets\Scripts\Button.cs" />
     <Compile Include="Assets\Scripts\Button2.cs" />
     <Compile Include="Assets\Scripts\Button3.cs" />
+    <Compile Include="Assets\Scripts\Button4.cs" />
     <Compile Include="Assets\Scripts\KnightAI.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ScreenShake.cs" />
