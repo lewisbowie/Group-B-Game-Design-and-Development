@@ -48,9 +48,10 @@ public class PlayerController : MonoBehaviour
     private float lastAttackMelee;
     public float AttackRangeBreath;
     private float LastAttackBreath;
-    public Animator anim; 
+    public Animator anim;
 
     public Text CollectibleNumber;
+    public GameObject Collectible;
 
 
 
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour
         //gets the controller on start
         controller = GetComponent<Rigidbody2D>();
 
-      
+
         facingRight = true;
 
         // Gravity of Game object
@@ -82,9 +83,9 @@ public class PlayerController : MonoBehaviour
     void Fly()
     {
         //flys character
-      
-          canFly = true;
-          flyingTimer = 0;
+
+        canFly = true;
+        flyingTimer = 0;
         controller.gravityScale = 0.0f;
     }
 
@@ -96,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-   void FixedUpdate()
+    void FixedUpdate()
     {
         moveDirection = Input.GetAxis("Horizontal");
         controller.velocity = new Vector2(moveDirection * speed, controller.velocity.y);
@@ -106,17 +107,17 @@ public class PlayerController : MonoBehaviour
 
     void CollectiblesCollected()
     {
-       
-       // CollectibleNumber.text = "Collectibles: " + pickedUp;
+
+        // CollectibleNumber.text = "Collectibles: " + pickedUp;
     }
 
-   public void Update()
+    public void Update()
     {
         CollectiblesCollected();
         //checks if the player is on grounds
         if (Physics2D.OverlapCircle(GroundCheck.position, 0.2f))
         {
-          
+
 
             //changes direction character faces to last key
             if (moveDirection > 0 && !facingRight || moveDirection < 0 && facingRight)
@@ -172,22 +173,35 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-       
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            ChestOpen();
+        }
+
+
+
         //Melee Attack
 
-        if(Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             MeleeAttack();
-           
+
         }
-        if(Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             BreathAttack();
         }
-       
-        }
-    
 
+    }
+
+    public void ChestOpen()
+    {
+        if(GameObject.FindGameObjectWithTag("Chest"))
+        {
+            Instantiate(Collectible, transform.position, transform.rotation);
+        }
+    }
 
     //Checks if player is grounded as to jump
     void OnCollisionEnter2D(Collision2D collision)
@@ -207,6 +221,7 @@ public class PlayerController : MonoBehaviour
            // canFly = false;
         }
     }
+  
 
     //Adds collectible pick up
     void OnTriggerEnter2D(Collider2D collider)
@@ -217,6 +232,8 @@ public class PlayerController : MonoBehaviour
             pickedUp += 1;
         }
     }
+
+    
  
     public void TakeDamage(int damage)
     {
@@ -265,5 +282,6 @@ public class PlayerController : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
     }
+ 
 } 
 
