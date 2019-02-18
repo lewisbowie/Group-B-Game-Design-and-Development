@@ -14,9 +14,9 @@
         //uses raycast to detect when platform edge is beside the enemy.
         if (CheckGround)         {             RaycastHit2D groundInfo = Physics2D.Raycast(GroundDetection.position, Vector2.down, distance);              if (groundInfo.collider == false)             {                 if (moveRight == true)                 {                     transform.eulerAngles = new Vector3(0, -180, 0);                     moveRight = false;                 }                 else                 {                     transform.eulerAngles = new Vector3(0, 0, 0);                     moveRight = true;                 }             }          }         if (CheckWall)         {             RaycastHit2D Wall = Physics2D.Raycast(WallDetection.position, direction, distance);              if (Wall == true)             {                 if (Wall.collider.CompareTag("Wall"))                 {
                     //makes the enemy detect the wall with tag wall using raycast
-                    Rotate();                     speed *= -1;                     direction *= -1;                     moveRight = false;                 }                 if (Wall.collider.CompareTag("Player"))                 {
+                    Rotate();                     speed *= -1;                     direction *= -1;                     moveRight = true;                 }                 if (Wall.collider.CompareTag("Player"))                 {
                     //makes the enemy detect the wall with tag wall using raycast
-                    Rotate();                     speed *= -1;                     direction *= -1;                     moveRight = false;                 }             }         }
+                    Rotate();                     speed *= -1;                     direction *= -1;                     moveRight = true;                 }             }         }
 
         //Attacking the Player melee
         float distancefromPlayer = Vector2.Distance(transform.position, Player.position);           if (distancefromPlayer < AttackRangeMelee)         {             if (Time.time > lastAttack + DelayAttack)             {                 Player.SendMessage("TakeDamage", damage);                 lastAttack = Time.time;             }          }          if (distancefromPlayer < minDistance)         {
