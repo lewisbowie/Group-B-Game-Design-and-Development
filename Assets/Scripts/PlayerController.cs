@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [Header("Player Movement")]
     public float speed = 10.0f;
     public float FlySpeed = 12.0f;
-    public float JumpForce = 900.0f;
+    public float JumpForce = 10.0f;
     public float flyingTime = 2f;
 
     //other variables
@@ -91,7 +91,9 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         //Jumps character
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 500f));
+        //GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 500f));
+        GetComponent<Rigidbody2D>().AddForce(jump);
+        Debug.Log(JumpForce);
     }
 
    void FixedUpdate()
@@ -108,7 +110,7 @@ public class PlayerController : MonoBehaviour
        // CollectibleNumber.text = "Collectibles: " + pickedUp;
     }
 
-        void Update()
+   void Update()
     {
         CollectiblesCollected();
         //checks if the player is on grounds
@@ -134,6 +136,7 @@ public class PlayerController : MonoBehaviour
                 if (canJump)
                 {
                     Jump();
+                    controller.gravityScale = 5.0f;
                 }
             }
         }
