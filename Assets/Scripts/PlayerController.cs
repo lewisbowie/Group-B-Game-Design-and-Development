@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
         //Jumps character
         //GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 500f));
         GetComponent<Rigidbody2D>().AddForce(jump);
-        Debug.Log(JumpForce);
+
     }
 
    void FixedUpdate()
@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
        // CollectibleNumber.text = "Collectibles: " + pickedUp;
     }
 
-   void Update()
+   public void Update()
     {
         CollectiblesCollected();
         //checks if the player is on grounds
@@ -178,6 +178,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Z))
         {
             MeleeAttack();
+           
         }
         if(Input.GetKeyDown(KeyCode.X))
         {
@@ -228,7 +229,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    void MeleeAttack()
+    public void MeleeAttack()
     {
         float distancefromPlayerMelee = Vector2.Distance(transform.position, Knight.position);
 
@@ -238,13 +239,14 @@ public class PlayerController : MonoBehaviour
             {
 
                 Knight.SendMessage("TakeDamage", MeleeDamage);
+                print("melleee");
                 lastAttackMelee = Time.time;
             }
         }
        
     }
 
-    void BreathAttack()
+    public void BreathAttack()
     {
         float distancefromPlayerBreath = Vector2.Distance(transform.position, Knight.position);
 
