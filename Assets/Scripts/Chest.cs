@@ -11,20 +11,27 @@ public class Chest : MonoBehaviour
     public GameObject[] objects;
     public string tagName;
     public Transform SpawnPoint;
- 
- 
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            OpenChest();
+        }
+    }
+
     void OpenChest()
     {
         GameObject Collectible = Instantiate(objects[Random.Range(0, objects.Length)], SpawnPoint.position, SpawnPoint.rotation) as GameObject;
     }
 
-   void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.tag == tagName)
-        {
-            OpenChest();
-            print("chest opened");
-        }
-    }
+   //void OnTriggerEnter2D(Collider2D other)
+   // {
+       // if(other.gameObject.tag == tagName)
+       // {
+        //    OpenChest();
+        //    print("chest opened");
+       // }
+   // }
 }
  
