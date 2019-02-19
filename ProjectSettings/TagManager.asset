@@ -8,6 +8,7 @@ TagManager:
   - Collectible
   - Wall
   - Enemy
+  - Chest
   layers:
   - Default
   - TransparentFX

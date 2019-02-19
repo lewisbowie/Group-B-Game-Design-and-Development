@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
 
     public Text CollectibleNumber;
     public GameObject Collectible;
+    public Transform Chest;
+    public float Range;
 
 
 
@@ -197,9 +199,17 @@ public class PlayerController : MonoBehaviour
 
     public void ChestOpen()
     {
-        if(GameObject.FindGameObjectWithTag("Chest"))
+        float distancefromPlayerChest = Vector2.Distance(transform.position, Chest.position);
+        if (gameObject.tag == "Chest")
         {
-            Instantiate(Collectible, transform.position, transform.rotation);
+            if (distancefromPlayerChest < Range)
+            {
+         
+                    Instantiate(Collectible, transform.position, transform.rotation);
+                    print("ev");
+
+
+            }
         }
     }
 
