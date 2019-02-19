@@ -65,7 +65,6 @@
     <Compile Include="Assets\Art\3DEnvironments\EnvironmentScripts\Flicker.cs" />
     <Compile Include="Assets\Art\3DEnvironments\EnvironmentScripts\LockedMineDoor.cs" />
     <Compile Include="Assets\Art\3DEnvironments\EnvironmentScripts\MineDoor.cs" />
-    <Compile Include="Assets\Chest.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
     <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
@@ -123,6 +122,7 @@
     <Compile Include="Assets\Scripts\Button2.cs" />
     <Compile Include="Assets\Scripts\Button3.cs" />
     <Compile Include="Assets\Scripts\Button4.cs" />
+    <Compile Include="Assets\Scripts\Chest.cs" />
     <Compile Include="Assets\Scripts\KnightAI.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ScreenShake.cs" />
