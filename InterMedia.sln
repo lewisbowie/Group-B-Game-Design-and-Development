@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterMedia", "Assembly-CSharp.csproj", "{9206C388-F016-30AC-6F7C-347E27DC2739}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterMedia", "Assembly-CSharp-Editor.csproj", "{0A090748-F206-D0C8-5C8E-928B745C74EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9206C388-F016-30AC-6F7C-347E27DC2739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9206C388-F016-30AC-6F7C-347E27DC2739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9206C388-F016-30AC-6F7C-347E27DC2739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9206C388-F016-30AC-6F7C-347E27DC2739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A090748-F206-D0C8-5C8E-928B745C74EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A090748-F206-D0C8-5C8E-928B745C74EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A090748-F206-D0C8-5C8E-928B745C74EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A090748-F206-D0C8-5C8E-928B745C74EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
