@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37312242, g: 0.3807421, b: 0.35872674, a: 1}
+  m_IndirectSpecularColor: {r: 0.373122, g: 0.3807418, b: 0.35872626, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7011,6 +7011,31 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.996756e-15
       objectReference: {fileID: 0}
+    - target: {fileID: 61784068322316688, guid: aac24767bb4db3c4abf2a51baae88663,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61922302984477928, guid: aac24767bb4db3c4abf2a51baae88663,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61639527944684730, guid: aac24767bb4db3c4abf2a51baae88663,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -97.89403
+      objectReference: {fileID: 0}
+    - target: {fileID: 61639527944684730, guid: aac24767bb4db3c4abf2a51baae88663,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 201.51804
+      objectReference: {fileID: 0}
+    - target: {fileID: 61639527944684730, guid: aac24767bb4db3c4abf2a51baae88663,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 300.39996
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aac24767bb4db3c4abf2a51baae88663, type: 2}
   m_IsPrefabParent: 0
@@ -7647,6 +7672,8 @@ MonoBehaviour:
   anim: {fileID: 2032426078}
   CollectibleNumber: {fileID: 0}
   Collectible: {fileID: 0}
+  Chest: {fileID: 0}
+  Range: 0
   GroundCheck: {fileID: 285255439}
 --- !u!212 &2032426077
 SpriteRenderer:
