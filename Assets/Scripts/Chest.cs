@@ -7,31 +7,34 @@ public class Chest : MonoBehaviour
 
     //public GameObject Collectible;
     public float Range;
-    public Transform Player;
     public GameObject[] objects;
-    public string tagName;
     public Transform SpawnPoint;
+    private bool opened;
 
+
+   void Start()
+    {
+        //opened = false;
+    }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.O))
-        {
-            OpenChest();
-        }
+      
+       
+
+            if (Input.GetKeyDown(KeyCode.O) && !opened)
+            {
+                OpenChest();
+            }
+       
+   
     }
 
     void OpenChest()
     {
+        opened = true;
         GameObject Collectible = Instantiate(objects[Random.Range(0, objects.Length)], SpawnPoint.position, SpawnPoint.rotation) as GameObject;
     }
 
-   //void OnTriggerEnter2D(Collider2D other)
-   // {
-       // if(other.gameObject.tag == tagName)
-       // {
-        //    OpenChest();
-        //    print("chest opened");
-       // }
-   // }
+
 }
  
