@@ -14,7 +14,7 @@ public class Chest : MonoBehaviour
 
    void Start()
     {
-        //opened = false;
+       
     }
     void Update()
     {
