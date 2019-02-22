@@ -226,12 +226,6 @@ public class PlayerController : MonoBehaviour
             //can fly for 10 seconds
         }
 
-
-
-
-       
-      
-
         if (Input.GetKeyDown(KeyCode.O))
         {
             ChestOpen();
