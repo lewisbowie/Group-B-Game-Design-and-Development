@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
     {
         moveDirection = Input.GetAxis("Horizontal");
         controller.velocity = new Vector2(moveDirection * speed, controller.velocity.y);
-        anim.SetFloat("Speed", controller.velocity);
+        anim.SetFloat("Speed", controller.velocity.x);
 
     }
 
