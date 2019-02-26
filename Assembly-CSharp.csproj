@@ -128,7 +128,11 @@
     <Compile Include="Assets\Scripts\KnightAI.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ScreenShake.cs" />
+    <None Include="Assets\Art\3DEnvironments\Materials\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Emissive Diffuse.shader" />
+    <None Include="Assets\Art\3DEnvironments\Materials\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Transparent Diffuse Bump Cutout.shader" />
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
+    <None Include="Assets\Art\3DEnvironments\Materials\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Standard Diffuse Bump.shader" />
+    <None Include="Assets\Art\3DEnvironments\Materials\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Transparent Diffuse Bump.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>M:/Desktop/InterMediaProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
