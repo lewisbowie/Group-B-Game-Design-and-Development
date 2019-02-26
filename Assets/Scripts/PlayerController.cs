@@ -170,12 +170,15 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.M) && !canFly)
                 {
                     Fly();
+                    anim.SetBool("Fly", true);
+
                 }
 
                 //returns if M is released flying stops
                 if (Input.GetKeyUp(KeyCode.M))
                 {
                     canFly = false;
+                    anim.SetBool("Fly", false);
                     controller.gravityScale = 5.0f;
                 }
 
