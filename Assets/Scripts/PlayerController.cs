@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
     {
         moveDirection = Input.GetAxis("Horizontal");
         controller.velocity = new Vector2(moveDirection * speed, controller.velocity.y);
-        anim.SetFloat("Speed", controller.velocity.x);
+        anim.SetFloat("Speed", controller.velocity);
 
     }
 
@@ -149,6 +149,7 @@ public class PlayerController : MonoBehaviour
                 {
                     Jump();
                     controller.gravityScale = 5.0f;
+                    anim.SetTrigger("Jump");
                 }
             }
         }
