@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: 2a37ca5a75e12f4489db422ec00c3132
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: melee_sprite_0
+    21300002: melee_sprite_1
+    21300004: melee_sprite_2
+    21300006: melee_sprite_3
+    21300008: melee_sprite_4
+    21300010: melee_sprite_5
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -80,11 +86,131 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: melee_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 463
+        width: 267
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bffbb43e91c7cc4cb3b7f607dcb4ea8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 463
+        width: 256
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde436f471e40e746963a1e83a8ca6a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 463
+        width: 272
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c179df874b09147b77a44dd4ad90cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 108
+        width: 365
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ca3dd33feff2949b92c51dcbf09aea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 108
+        width: 475
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6d66c1e8cecc7418427da61611bcc3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 109
+        width: 360
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddaa564d203a6904b8cefc2ce29d224b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c35eb27c62ee60545a84995e45314987
     vertices: []
     indices: 
     edges: []

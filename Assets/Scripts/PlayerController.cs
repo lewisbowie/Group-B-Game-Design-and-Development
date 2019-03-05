@@ -200,6 +200,7 @@ public class PlayerController : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Z))
                 {
+                    anim.SetTrigger("Melee");
                     MeleeAttack();
                 }
             }
@@ -222,6 +223,7 @@ public class PlayerController : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.X))
                 {
+                    anim.SetTrigger("Breath");
                     BreathAttack();
                 }
             }
@@ -315,6 +317,7 @@ public class PlayerController : MonoBehaviour
                 Knight.SendMessage("TakeDamage", MeleeDamage);
                 print("melleee");
                 lastAttackMelee = Time.time;
+               
             }
         }
        
@@ -324,7 +327,7 @@ public class PlayerController : MonoBehaviour
     {
         float distancefromPlayerBreath = Vector2.Distance(transform.position, Knight.position);
 
-        if(GameObject.FindGameObjectWithTag("Enemy"))
+        if (GameObject.FindGameObjectWithTag("Enemy"))      
         {
             if(distancefromPlayerBreath < AttackRangeBreath)
             {
