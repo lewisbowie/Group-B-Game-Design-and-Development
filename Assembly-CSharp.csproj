@@ -122,10 +122,12 @@
     <Compile Include="Assets\Scripts\Button2.cs" />
     <Compile Include="Assets\Scripts\Button3.cs" />
     <Compile Include="Assets\Scripts\Button4.cs" />
+    <Compile Include="Assets\Scripts\Button5.cs" />
     <Compile Include="Assets\Scripts\Chest.cs" />
     <Compile Include="Assets\Scripts\Death.cs" />
     <Compile Include="Assets\Scripts\FloorFall.cs" />
     <Compile Include="Assets\Scripts\KnightAI.cs" />
+    <Compile Include="Assets\Scripts\MineCart.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ScreenShake.cs" />
     <None Include="Assets\Art\3DEnvironments\Materials\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Emissive Diffuse.shader" />

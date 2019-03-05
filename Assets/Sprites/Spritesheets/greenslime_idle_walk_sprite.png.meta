@@ -92,11 +92,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 536
+        y: 547
         width: 296
-        height: 204
+        height: 193
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -112,11 +112,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 443
-        y: 536
+        y: 547
         width: 317
-        height: 177
+        height: 166
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -132,11 +132,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 848
-        y: 540
+        y: 551
         width: 372
-        height: 142
+        height: 131
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,11 +152,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 120
+        y: 131
         width: 296
-        height: 205
+        height: 194
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,11 +172,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 467
-        y: 120
+        y: 133
         width: 293
-        height: 229
+        height: 216
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: greenslime_idle_walk_sprite_5
       rect:
         serializedVersion: 2
-        x: 924
-        y: 120
+        x: 925
+        y: 132
         width: 265
-        height: 274
+        height: 262
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
